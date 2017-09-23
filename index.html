@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>味多美手机商城</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width">
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<!-- 定义容器元素及路由容器 -->
+	<div id="app">
+		<!-- header -->
+		<header class="header clear">
+			<h1>味多美</h1>
+			<span>北京</span>
+			<span>登录&nbsp;|&nbsp;注册</span>
+		</header>
+		<!-- 路由容器 -->
+		<router-view></router-view>
+	</div>
+	<!-- Home页面 -->
+	<template id="home">
+		<div class="home">
+			<div class="carousel" id="carousel">
+				<div class="swipe">
+        			<div class="swipe-container">
+						<li  class="swipe-li" v-for="(item,index) in carousel"><img :src="'img/shouye/' + item.img" alt=""></li>
+					</div>
+    			</div>
+			</div>
+			<div class="list clear">
+				<ul class="clear">
+					<li v-for="(item,index) in list">
+						<a :href="'/#/' + item.id">
+							<img :src="'img/shouye/' + item.img" alt="">
+							<p>{{item.title}}</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="xiangqing">
+				<ul class="clear">
+					<li v-for="item in xiangqing"><img :src="'img/shouye/' + item.img" alt=""></li>
+				</ul>
+			</div>
+			<div class="box">人气商品</div>
+			<div class="renqi">
+				<ul class="clear">
+					<li v-for="item in renqi">
+						<a href="#/mianbao/food/01">
+							<img :src="'img/shouye/' + item.img" alt="">
+							<p class="title">{{item.title}}</p>
+							<p>
+								<span>{{item.price}}</span><span>/</span><span>{{item.radius}}</span>
+							</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="box2">
+				<div class="ps">
+					<p>
+						<a href="">联系我们</a>
+						<a href="">企业服务</a>
+					</p>
+					<p>Copyright © 2015-2016  味多美手机商城 版权所有</p>
+				</div>
+			</div>
+			<!-- <div v-on:click="goBack" class="go_back">
+				<img src="img/shouye/download.png" alt="">
+			</div> -->
+			<!-- footer -->
+			<footer class="footer">
+				<router-link v-for="item in menu" :to="item.id" v-text="item.text" :key="item.id"></router-link>
+			</footer>
+		</div>
+		
+	</template>
+	<!-- Fenlei页面 -->
+	<template id="fenlei">
+		<div class="fenlei">
+			<div class="banner">
+				<img src="img/fenlei/banner.jpg" alt="">
+			</div>
+			<ul class="clear">
+				<li v-for="(item,index) in list">
+					<a href="/#/dangao">
+						<img :src="'img/fenlei/' + item.img" alt="">
+					<span>{{item.title}}</span>
+					</a>
+				</li>
+			</ul>
+			<!-- footer -->
+			<footer class="footer">
+				<router-link v-for="item in menu" :to="item.id" v-text="item.text" :key="item.id"></router-link>
+			</footer>
+		</div>
+	</template>
+	<!-- Shop页面 -->
+	<template id="shop">
+		<div class="shop">
+			<p><a href="#/home">购物车</a></p>
+			<div class="xj">我的购物车</div>
+			<div class="bot">
+				<span>您的购物车为空，赶快<a href="#/fenlei">去购物吧</a>！</span>
+			</div>
+			<div class="fot clear">
+				<span><a href="#/home">继续购物</a></span>
+				<span><a href="#/home">去结算</a></span>
+			</div>
+		</div>
+	</template>
+	<!-- Login页面 -->
+	<template id="login">
+		<div class="login">
+			<div class="hd clear">
+				<span><a href="#/home"></a></span>
+				<span>用户登录</span>
+				<span v-on:click="xiaoshi"></span>
+			</div>
+			<ul class="clear" v-show="istrue">
+				<li>首页</li>
+				<li>分类搜索</li>
+				<li>购物车</li>
+				<li>会员中心</li>
+			</ul>
+			<div class="setion">
+				<div class="qh clear">
+					<span class="xz">普通会员登录</span>
+					<span>手机动态码登录</span>
+				</div>
+				<form action="">
+					<input type="text" placeholder="用户名/手机号/邮箱">
+					<input type="password" placeholder="输入密码">
+					<p>
+						<label><input type="checkbox">七天内自动登录</label>
+						<span>忘记密码?</span>
+					</p>
+					<input type="submit" value="登录">
+					<p>
+						<a href="">没有账号？立即注册</a>
+					</p>
+					<p class="tishi">温馨提示：成功注册会员，登录后首次完善个人信息，即可获赠官网会员20积分。</p>
+				</form>
+			</div>
+			<div class="fd">
+				<p>
+					<a href="">联系我们</a>
+					<a href="">企业服务</a>
+				</p>
+				<p>Copyright © 2015-2016  味多美手机商城 版权所有</p>
+			</div>
+			<!-- footer -->
+			<footer class="footer">
+				<router-link v-for="item in menu" :to="item.id" v-text="item.text" :key="item.id"></router-link>
+			</footer>
+		</div>
+	</template>
+	<!-- 蛋糕页面 -->
+	<template id="dangao">
+		<div class="dangao">
+			<div class="banner">
+				<img src="img/fenlei/banner.jpg" alt="">
+			</div>
+			<div class="xz">
+				<ul class="clear">
+					<li>
+						<a v-on:click="fenlei">分类</a>
+						<ul v-if="isFenlei">
+							<li v-for="item in fenleir">{{item}}</li>
+						</ul>
+					</li>
+					<li>
+						<a v-on:click="kouwei">口味</a>
+						<ul v-if="isKouwei">
+							<li v-for="item in kouweir">{{item}}</li>
+						</ul>
+					</li>
+					<li>
+						<a v-on:click="changjing">场景</a>
+						<ul v-if="isChangjing">
+							<li v-for="item in changjingr">{{item}}</li>
+						</ul>
+					</li>
+					<li>
+						<a v-on:click="xiaoliang">销量</a>
+					</li>
+				</ul>
+			</div>
+			<div class="lst">
+				<ul class="clear">
+					<li class="clear" v-for="item in list">
+						<img :src="'img/shengridangao/' + item.img" alt="">
+						<div class="sp">
+							<h5>{{item.title}}</h5>
+							<p>{{item.text}}</p>
+							<span>{{item.price}}</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="box2">
+				<div class="ps">
+					<p>
+						<a href="">联系我们</a>
+						<a href="">企业服务</a>
+					</p>
+					<p>Copyright © 2015-2016  味多美手机商城 版权所有</p>
+				</div>
+			</div>
+			<!-- footer -->
+			<footer class="footer">
+				<router-link v-for="item in menu" :to="item.id" v-text="item.text" :key="item.id"></router-link>
+			</footer>
+		</div>
+	</template>
+	<!-- 面包列表页面 -->
+	<template id="mianbao">
+		<div class="mianbao">
+			<div class="liebiao clear">
+				<router-link v-for="(item,index) in nav" :to="'/mianbao/food/' + item.id" v-text="item.text" :key="index" tag="a"></router-link>
+			</div>
+			<!-- footer -->
+			<footer class="footer">
+				<router-link v-for="item in menu" :to="item.id" v-text="item.text" :key="item.id"></router-link>
+			</footer>
+			<!-- 子路由容器 -->
+			<div class="content">
+				<router-view></router-view>
+			</div>
+
+		</div>
+	</template>
+	<!-- 面包详情页面 -->
+	<template id="tpl_food">
+		<div class="tpl_food">
+			<ul>
+				<li class="clear" v-for="item in list">
+					<img :src="'img/mianbao/' + item.img" alt="">
+					<div class="sp">
+						<h4>{{item.title}}</h4>
+						<div>{{item.text}}</div>
+						<p><span>{{item.price}}</span>
+							<span @click="add(item);">+</span>
+							<span v-show="item.num && item.num > 0">{{item.num}}</span>
+							<span v-show="item.num && item.num > 0" @click="reduce(item);">-</span>
+						</p>
+					</div>
+				</li>
+			</ul>
+			<!-- <div class="fot clear">
+				<span>继续购物</span>
+				<span>去结算</span>
+			</div> -->
+		</div>
+	</template>
+	<!-- 配送页面 -->
+	<template id="peisong">
+		<div class="peisong">
+			
+		</div>
+	</template>
+	<!-- 货卡页面 -->
+	<template id="huoka">
+		<div class="huoka">
+			
+		</div>
+	</template>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript" src="js/vue-router.js"></script>
+	<script type="text/javascript" src="js/vue-resource.js"></script>
+	<script type="text/javascript" src="js/vuex.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script src="js/mobile-swipe.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,625 @@
+/*主页carousel部分*/
+.home{
+	/*width:100%;*/
+}
+.carousel{
+	position:relative;
+	top:50px;
+	left:0;
+	width:100%;
+}
+.swipe{
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+    }
+
+.swipe-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+}
+.swipe-container .swipe-li{
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    /*height: 100%;*/
+    position: relative;
+}
+.swipe-container .swipe-li img{
+    width: 100%;
+    height:100%;
+}
+.list{
+	margin-top:50px;
+	width:100%;
+}
+.list ul{
+	width:100%;
+	padding-top:10px;
+}
+.list ul li a{
+	display:block;
+	float:left;
+	width:25%;
+	padding:10px 0;
+	font-size:12px;
+	text-align: center;
+}
+.list ul li img{
+	width:50%;
+}
+/*主页xiangqing部分*/
+.xiangqing{
+	width:100%;
+	margin-top:5px;
+	border-top:1px solid #eee;
+}
+.xiangqing ul li{
+	overflow:hidden;
+	float:left;
+	width:100%;
+	box-sizing:border-box;
+}
+.xiangqing ul li:nth-child(1){
+	width:40%;
+	border-right:1px solid #eee;
+}
+.xiangqing ul li:nth-child(2){
+	width:60%;
+	border-bottom:1px solid #eee;
+}
+.xiangqing ul li:nth-child(3){
+	width:30%;
+	border-right:1px solid #eee;
+}
+.xiangqing ul li:nth-child(4){
+	width:30%;
+}
+.xiangqing ul li img{
+	width:100%;
+}
+.home .box{
+	width:100%;
+	height:40px;
+	background:#eee;
+	color:#c22934;
+	text-align: center;
+	line-height:40px;
+}
+/*主页renqi部分*/
+.renqi ul{
+	width:100%;
+}
+.renqi ul li a {
+	display:block;
+	width:50%;
+	text-align: center;
+	float:left;
+	font-size:12px;
+	border-bottom:1px solid #eee;
+}
+.renqi ul li a img{
+	width:60%;
+	padding:20px 0;
+}
+.renqi ul li a p{
+	margin-bottom:10px;
+	color:#666;
+}
+.renqi ul li a p span{
+	color:red;
+}
+.renqi ul li:last-child a p:last-child span:nth-child(2){
+	display:none;
+}
+.renqi ul li:nth-last-child(2) a p:last-child span:nth-child(2){
+	display:none;
+}
+.box2{
+	width:100%;
+	background:#eee;
+	margin-bottom:60px;
+	height:60px;
+	font-size:12px;
+	line-height:25px;
+	padding:6px 0;
+	color:#666;
+	text-align: center;
+
+}
+.box2 .ps{
+	height:60px;
+	background:#fff;
+}
+.box2 .ps p a {
+	font-size:14px;
+	color:#666;
+	line-height:30px;
+}
+.go_back{
+	position:relative;
+}
+.go_back img{
+	width:40px;
+	position:fixed;
+	bottom:60px;
+	right:0px;
+	background-size:50%;
+}
+/*分类页*/
+.fenlei .banner img{
+	margin-top:50px;
+	width:100%;
+}
+.fenlei ul{
+	width:100%;
+}
+.fenlei ul li{
+	float:left;
+	width:25%;
+	text-align: center;
+	padding:15px 0;
+	font-size:13px;
+	border-bottom:2px solid #eee;
+	border-right:2px solid #eee;
+	box-sizing:border-box;
+}
+.fenlei ul li:nth-child(4),.fenlei ul li:nth-child(8){
+	border-right:none;
+}
+.fenlei ul li img{
+	width:50%;
+}
+.fenlei ul li span{
+	padding-top:10px;
+	display:block;
+}
+/*登录页*/
+.login{
+	padding-top:50px;
+}
+.login .hd{
+	width:100%;
+	height:40px;
+	background:#E4393C;
+	color:#fff;
+}
+.login .hd span{
+	width:33.33333333%;
+	line-height:40px;
+	height:40px;
+}
+.login .hd span:first-child a{
+	display:block;
+	float:left;
+	width:22px;
+	height:37px;
+	background:url(../img/jlt.png) no-repeat -55px 12px;
+	background-size:180px 180px;
+}
+.login .hd span:nth-child(2){
+	float:left;
+	padding-left:30%;
+	text-align: center;
+}
+.login .hd span:nth-child(3){
+	float:right;
+	width:36px;
+	height:33px;
+	background:url(../img/jlt.png) no-repeat -125px -17px;
+	background-size:180px 180px;
+}
+.login ul {
+	width:100%;
+}
+.login ul li{
+	float:left;
+	width:25%;
+	height:60px;
+	line-height:90px;
+	text-align: center;
+	color:#666;
+	font-size:13px;
+	border-bottom:2px solid #eee;
+	position:relative;
+}
+.login ul li::after{
+	content:"";
+	position:absolute;
+	left:50%;
+	margin-left:-12.5%;
+	top:10px;
+	width:22.5px;
+	height:23.5px;
+	background:url(../img/jlt.png)  no-repeat -60px -24px;
+	background-size:180px 180px;
+}
+.login ul li:nth-child(2)::after{
+	content:"";
+	position:absolute;
+	left:50%;
+	margin-left:-12.5%;
+	top:10px;
+	width:22.5px;
+	height:23.5px;
+	background:url(../img/jlt.png)  no-repeat -3px -24px;
+	background-size:180px 180px;
+}
+.login ul li:nth-child(3)::after{
+	content:"";
+	position:absolute;
+	left:50%;
+	margin-left:-12.5%;
+	top:10px;
+	width:22.5px;
+	height:23.5px;
+	background:url(../img/jlt.png)  no-repeat -33px -24px;
+	background-size:180px 180px;
+}
+.login ul li:nth-child(4)::after{
+	content:"";
+	position:absolute;
+	left:50%;
+	margin-left:-12.5%;
+	top:10px;
+	width:22.5px;
+	height:23.5px;
+	background:url(../img/jlt.png)  no-repeat -85px -24px;
+	background-size:180px 180px;
+}
+.login .setion{
+	padding:0px 20px;
+	overflow:hidden;	
+}
+.login .setion .qh{
+	height:50px;
+	line-height:50px;
+}
+.login .setion .qh span{
+	text-align: center;
+	float:left;
+	display:block;
+	width:50%;
+}
+.login .setion .qh span.xz{
+	border-bottom:2px solid #a92034;
+}
+.login .setion form input{
+	display:block;
+	width:100%;
+	height:35px;
+	margin-top:15px;
+	text-indent: 10px;
+}
+.login .setion form p label{
+	width:60%;
+	height:50px;
+	line-height:50px;
+	float:left;
+	color:#666;
+}
+.login .setion form p label input{
+	width:20px;
+	height:20px;
+	display:line-block;
+	float:left;
+}
+.login .setion form p span{
+	float:right;
+	height:50px;
+	line-height:50px;
+	display:inline-block;
+	color:#666;
+}
+.login .setion form input[type="submit"]{
+	background:#a92034;
+	color:#fff;
+	outline:medium;
+	border:none;
+	text-indent: 0px;
+}
+.login .setion form p a{
+	height:50px;
+	line-height:50px;
+	color:#666;
+}
+.login .setion form p.tishi{
+	line-height:20px;
+}
+.login .fd{
+	margin-top:30px;
+	margin-bottom:75px;
+}
+.login .fd p{
+	line-height:20px;
+	text-align: center;
+	color:#666;
+	font-size:12px;
+}
+.login .fd p a{
+	font-size:13px;
+	color:#666;
+}
+/*购物车页面*/
+
+.shop p{
+	height:45px;
+	background:#e4393c;
+	margin-top:50px;
+	text-align: center;
+	color:#fff;
+	line-height:45px;
+	margin-bottom:10px;
+	position:relative;
+
+}
+.shop p a{
+	color:#fff;
+}
+.shop p a::after{
+
+	content:"";
+	position:absolute;
+	left:0;
+	top:0;
+	width:22px;
+	height:37px;
+	background:url(../img/jlt.png) no-repeat -55px 12px;
+	background-size:180px 180px;
+}
+.shop .xj{
+	height:45px;
+	line-height: 45px;
+	border-top:1px solid #dacea8;
+	border-bottom:1px solid #dacea8;
+	background:#ede6db;
+	color:#ce0000;
+	padding-left:5px;
+}
+.shop .fot{
+	width:60px;
+	width:100%;
+	background:#a22136;
+	line-height: 60px;
+	text-align: center;
+	color:#fff;
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:0;
+}
+.shop .bot span{
+	text-align: center;
+	display:block;
+	padding-top:150px;
+	height:30px;
+	background:url(../img/gouwuche.png) no-repeat center center;
+}
+
+.shop .bot span a{
+	color:#ce0000;
+}
+.shop .fot span{
+	height:60px;
+	display:inline-block;
+	width:50%;
+	float:left;
+	color:#fff;
+}
+.shop .fot span a{
+	color:#fff;
+	display:block;
+	width:100%;
+	height:100%;
+}
+.shop .fot span:first-child{
+	border-right:1px solid #fff;
+	box-sizing:border-box;
+	background:#333;
+}
+.shop .fot span:first-child::after{
+	content:"";
+	position:absolute;
+	right:0;
+	top:15px;
+	width:22px;
+	height:37px;
+	background:url(../img/jlt.png) no-repeat -55px 12px;
+	transform:rotate(180deg);
+	background-size:180px 180px;
+
+}
+/*生日蛋糕页*/
+.dangao .banner img{
+	padding-top:50px;
+	width:100%;
+	display:block;
+}
+.dangao .xz ul{
+	width:100%;
+	position:relative;
+}
+.dangao .xz ul>li{
+	float:left;
+	width:25%;
+}
+.dangao .xz ul>li a{
+	height:40px;
+	display:block;
+	line-height:40px;
+	border-left:none;
+	text-align: center;
+	border:1px solid #ccc;
+	box-sizing:border-box;
+	border-right:none;
+	color:#666;
+	position:relative;
+}
+.dangao .xz ul>li a::before{
+	content:"";
+	width:17px;
+	height:25px;
+	background:url(../img/xb.png) no-repeat 0 -12.5px;
+	background-size:17px 25px;
+	position:absolute;
+	right:5px;
+	top:15px;
+}
+.dangao .xz ul>li:first-child a{
+	border-left:none;
+}
+.dangao .xz ul>li ul{
+	width:100%;
+	position:absolute;
+	left:0;
+	top:41px;
+	background:#e0e0e0;
+}
+.dangao .xz ul>li ul li{
+	line-height:30px;
+	width:100%;
+	color:#666;
+	box-sizing:border-box;
+	padding-left:20px;
+}
+.dangao .lst li{
+	width:100%;
+	padding:10px 0;
+	box-sizing:border-box;
+	border-bottom:1px solid #ccc;
+}
+.dangao .lst li img{
+	display:block;
+	float:left;
+	width:30%;
+}
+.dangao .lst li .sp{
+	padding-left:10px;
+	overflow:hidden;
+	float:left;
+	width:70%;
+	box-sizing:border-box;
+}
+.dangao .lst li .sp h5{
+	font-weight:normal;
+	line-height:30px;
+}
+.dangao .lst li .sp p{
+	font-size:12px;
+	line-height:20px;
+	color:#666;
+	box-sizing:border-box;
+	padding-right:5px;
+}
+.dangao .lst li .sp span{
+	color:#666;
+	font-size:16px;
+	display:block;
+	line-height:30px;
+}
+/*面包外卖页*/
+.mianbao{
+	padding-top:50px;
+}
+.mianbao .liebiao{
+	float:left;
+	width:25%;
+	background:#eee;
+	position:fixed;
+	left:0;
+	top:50px;
+	z-index:-2;
+}
+.mianbao .liebiao a{
+	display:block;
+	text-align: center;
+	height:50px;
+	line-height:50px;
+	text-align: center;
+	border-bottom:1px solid #ddd;
+	border-right:1px solid #ddd;
+	font-size:14px;
+}
+.mianbao .liebiao a.router-link-active{
+	color:#f25398;
+	background-color:#fff;
+	border-right-color:#fff;
+}
+.tpl_food{
+	position:relative;
+	
+}
+.tpl_food ul{
+	background:#fff;
+	margin-left:25%;
+	padding:0 5px;
+	position:absolute;
+	right:0;
+	top:0;
+	left:0;
+	z-index:-1;
+	margin-bottom:60px;
+}
+.tpl_food ul li{
+	padding-left:5px;
+	border-bottom:1px solid #ccc;
+}
+.tpl_food ul li img{
+	width:40%;
+	float:left;
+	margin:10px 0;
+}
+.tpl_food ul li .sp{
+	padding-left:10px;
+	margin-left:40%;
+}
+.tpl_food ul li .sp h4{
+	font-size:14px;
+	padding:7px 0;
+	font-weight:normal;
+}
+.tpl_food ul li .sp div{
+	font-size:12px;
+	color:#666;
+	line-height:20px;
+}
+.tpl_food ul li .sp p span:first-child{
+	color:#8f0004;
+	display:inline-block;
+	padding:0 0 10px;
+	font-size:14px;
+}
+.tpl_food ul li .sp p span:nth-child(2),
+.tpl_food ul li .sp p span:nth-child(4){
+	background:#cc0000;
+	display:inline-block;
+	border-radius:50%;
+	text-align: center;
+	height:25px;
+	width:25px;
+	line-height:25px;
+	color:#fff;
+	font-size:18px;
+	float:right;
+}
+.tpl_food ul li .sp p span:nth-child(3){
+	width:15px;
+	height:25px;
+	line-height:25px;
+	text-align: center;
+	display:inline-block;
+	float:right;
+	font-size:13px;
+}
