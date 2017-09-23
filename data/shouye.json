@@ -21,42 +21,42 @@
 		],
 		"list":[
 			{
-				"id":"weiduomei/dangao",
+				"id":"dangao",
 				"img":"list1.png",
 				"title":"生日蛋糕"
 			},
 			{
-				"id":"weiduomei/mianbao/food/01",
+				"id":"mianbao/food/01",
 				"img":"list2.png",
 				"title":"面包外卖"
 			},
 			{
-				"id":"weiduomei/dangao",
+				"id":"dangao",
 				"img":"list3.png",
 				"title":"全国配送"
 			},
 			{
-				"id":"weiduomei/dangao",
+				"id":"dangao",
 				"img":"list4.png",
 				"title":"提货卡"
 			},
 			{
-				"id":"weiduomei/dangao",
+				"id":"dangao",
 				"img":"list5.png",
 				"title":"门店自提"
 			},
 			{
-				"id":"weiduomei/dangao",
+				"id":"dangao",
 				"img":"list6.png",
 				"title":"积分换礼"
 			},
 			{
-				"id":"weiduomei/dangao",
+				"id":"dangao",
 				"img":"list7.png",
 				"title":"查找门店"
 			},
 			{
-				"id":"weiduomei/dangao",
+				"id":"dangao",
 				"img":"list8.png",
 				"title":"会员中心"
 			}
